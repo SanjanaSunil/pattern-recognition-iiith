@@ -72,9 +72,9 @@
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-		    "init": ["mv /var/www/index.html index.html.default",
-                    "cp -r ../build/* /var/www/",
-			        "chmod -R 777 /var/www/*"
+		    "init": ["mv /var/www/html/index.html index.html.default",
+                    "cp -r ../build/* /var/www/html/",
+			        "chmod -R 777 /var/www/html/*"
                     ], 
                     "pause": [], 
                     "publish": [], 
