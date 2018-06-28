@@ -64,15 +64,17 @@
                 "arch": "i386", 
                 "hosting": "dedicated", 
                 "installer": ["sudo apt-get update", 
-				"sudo apt-get install -y php5 apache2 gcc g++ libapache2-mod-python libapache2-mod-wsgi", 
-        	                 "service apache2 restart"
-		], 
+				"sudo apt-get install -y php5 apache2 gcc g++ libapache2-mod-python libapache2-mod-wsgi" 
+        	             ], 
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
 		    "init": ["mv /var/www/html/index.html index.html.default",
-                    "cp -r ../build/* /var/www/html/",
-			        "chmod -R 777 /var/www/html/*"
+			     "cd pattern-recognition-iiith/src",
+			     "make",
+			     "rm -rf /var/www/*",
+			     "cp -r ../build/* /var/www/",
+			     "chmod -R 777 /var/www/*"
                     ], 
                     "pause": [], 
                     "publish": [], 
